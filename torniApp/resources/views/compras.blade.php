@@ -283,7 +283,6 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @if (isset($_SESSION['detallesCompra']))
                                                     @for($indice = 0; $indice < count($detalles); $indice++) 
                                                     <tr>
                                                         <td class="text-center">
@@ -301,7 +300,6 @@
                                                         <td class="text-center">{{number_format($detalles[$indice]->costoDetalle)}}</td>
                                                     </tr>
                                                     @endfor
-                                                    @endif
                                                 </tbody>
                                             </table>
                                             <label style="float: right; margin-bottom: 0; font-size: 24px; font-weight: 700; color: #000;">Total a pagar: $ {{number_format(session('costoTotalCompra'))}}</label>
@@ -310,7 +308,6 @@
                                                 <button class="btn btn-primary ml-2" type="submit" id="btnSave" style="border-radius: 10px; float: right; margin-top: 10%; margin-right: -16%; background: linear-gradient(to bottom, #F63A3D 80%, #000); display: flex; " >
                                                     <span style="margin-left: -3%; margin-right: 2%;">Registrar compra</span>
                                                     <img style="width: 1.3em; margin-left: 2%; margin-top: 1%; margin-right: -2%;" src="../css/fonts/carro.png" >
-                                                    <!--<span class="iconify" data-icon="material-symbols:shopping-cart-outline" id="sell-card" style="margin-left: 2%; margin-top: 3%; margin-right: -2%;"></span>-->
                                                 </button>
                                             </form>
                                         </div>
@@ -450,36 +447,6 @@
         <script src="/css/assets/js/hope-ui.js?v=4.0.0" defer></script>
         <script src="/css/assets/js/hope-uipro.js?v=4.0.0" defer></script>
         <script src="/css/assets/js/sidebar.js?v=4.0.0" defer></script>
-        <!--<script>
-            $(document).ready(function() {
-                fetchData();
-                function fetchData(query = '') {
-
-                    if (query) {
-                        $('#content').show();
-                    } else {
-                        $('#content').hide();
-                    }
-                    $.ajax({
-                        url: "{{route('compra.buscarProducto')}}",
-                        method: "GET",
-                        data: {
-                            query: query
-                        },
-                        dataType: 'json',
-                        success: function(data) {
-                            $("#content").html(data.table_data);
-                        }
-                    });
-                }
-                $(document).on('keyup', '#inputproducto', function() {
-                    var query = $(this).val();
-                    fetchData(query);
-                });
-            });
-        </script>-->
-        <!--<script src="/node_modules/jquery/dist/jquery.min.js"></script>-->
-        <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
         <script>
             function buscarProductos(){
                 var query = document.getElementById('inputproducto').value;

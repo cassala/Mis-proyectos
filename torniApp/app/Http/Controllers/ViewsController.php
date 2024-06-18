@@ -32,8 +32,8 @@ class ViewsController extends Controller
         }
 
         if (session('rol') == 'TECNICO') {
-
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
 
         if (session('rol') == 'ADMINISTRADOR') {
@@ -61,7 +61,8 @@ class ViewsController extends Controller
         }
         if (session('rol') == 'TECNICO') {
 
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         if (!isset($_SESSION['detallesCompra'])) {
             $_SESSION['detallesCompra'] = array();
@@ -92,7 +93,8 @@ class ViewsController extends Controller
     public function facturacion()
     {
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         if (!Session::has('idActor')) {
             //Alert::error('Debes estar loguedo para acceder a esta página');
@@ -122,6 +124,10 @@ class ViewsController extends Controller
         if (!Session::has('idActor')) {
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
+        if (session('rol') == 'TECNICO') {
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
+        }
 
         $citas = Cita::all();
         return view('citas', compact('citas'));
@@ -134,7 +140,8 @@ class ViewsController extends Controller
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         $productos = Producto::all();
         return view('inventario', compact('productos'));
@@ -147,7 +154,8 @@ class ViewsController extends Controller
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         $facturas = Factura::select()->orderBy('id', 'desc')->get();
         return view('facturas', compact('facturas'));
@@ -160,7 +168,8 @@ class ViewsController extends Controller
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         $servicios = Servicio::all();
         return view('servicios', compact('servicios'));
@@ -173,7 +182,8 @@ class ViewsController extends Controller
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         $proveedores = Proveedor::all();
         $proveedoresActivo = $proveedores->filter(
@@ -191,7 +201,8 @@ class ViewsController extends Controller
             return redirect()->route('interfaz.login')->with(['error' => 'Debes estar loguedo para acceder a esta página']);
         }
         if (session('rol') == 'TECNICO') {
-            return redirect()->route('citasT');
+            $citas = Cita::get();
+            return redirect()->route('citasT', compact('citas'));
         }
         if (session('rol') == 'ADMINISTRADOR') {
             return redirect()->route('home')->with(['error' => 'Para ingresar a la interfaz de reportes debes tener permisos']);
@@ -201,7 +212,8 @@ class ViewsController extends Controller
 
     public function citasT()
     {
-        return view('citasT');
+        $citas = Cita::get();
+        return view('citasT', compact('citas'));
     }
 
     public function logOut()

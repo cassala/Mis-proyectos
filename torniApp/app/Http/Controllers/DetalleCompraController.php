@@ -65,7 +65,7 @@ class DetalleCompraController extends Controller
     {
 
         try {
-            $detalle = new Detallecompra();
+            
             $nombre = $request->input('nombreProducto');
             $cantidad = $request->input('cantidad');
             $precioCompra = $request->input('costo');
@@ -81,23 +81,27 @@ class DetalleCompraController extends Controller
                 }
             }
 
+            $detalle = new Detallecompra();
+
             $producto->precioCompra = $precioCompra;
+            $producto->update();
 
             $costoDetalle = $this->calcularCostodetalle($cantidad, $precioCompra);
             $detalle->cantidad = $cantidad;
             $detalle->costoDetalle = $costoDetalle;
             $detalle->productos_id = $producto->id;
+            $detalle->update();
+            array_push($_SESSION['detallesCompra'], $detalle);
 
             $costoActual = session('costoTotalCompra');
             $nuevoCosto = $costoActual + $detalle->costoDetalle;
             session(['costoTotalCompra' => $nuevoCosto]);
 
-            array_push($_SESSION['detallesCompra'], $detalle);
         } catch (Exception $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
 
-        return redirect()->back()->with(['message' => 'Detalle agregado exitosamente']);
+        return redirect()->back();
     }
 
     /**
@@ -105,8 +109,6 @@ class DetalleCompraController extends Controller
      */
     public function eliminarDetalle($indice)
     {
-        //$indice = $request->input('indice');
-
         $detalles = $_SESSION['detallesCompra'];
 
         $costoActual = session('costoTotalCompra');
@@ -116,44 +118,8 @@ class DetalleCompraController extends Controller
         array_splice($detalles, $indice, 1);
         $_SESSION['detallesCompra'] = $detalles;
         
-        //return response()->json(['message' => 'Elemento Eliminado']);
         return redirect()->back();
     }
-
-    //Buscador con autocompletado
-    /*public function buscarProducto(Request $request)
-    {
-        if ($request->ajax()) {
-
-            $html = '';
-            $query = $request->get('query');
-
-            if ($query != '') {
-                $productos = Producto::select()->where('nombre', 'LIKE', '%' . $query . '%')
-                    ->orWhere('codigo', 'LIKE', '%' . $query . '%')->take(2)
-                    ->get();
-            } else {
-                $productos = Producto::select()
-                    ->orderBy('id', 'DESC')
-                    ->get();
-            }
-        }
-
-        $num_rows = $productos->count();
-        if ($num_rows > 0) {
-
-            foreach ($productos as $producto) {
-                $html .= '<li> ' . $producto->nombre . '</li>';
-            }
-        } else {
-            $html .= '<li></li>';
-        }
-        $data = array(
-            'table_data' => $html
-        );
-
-        return response($data, JSON_UNESCAPED_UNICODE);
-    }*/
 
     public function buscarProducto(Request $request)
     {

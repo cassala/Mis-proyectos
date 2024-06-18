@@ -34,7 +34,7 @@ Route::get('/agendamiento', [ViewsController::class, 'agendamiento'])->name('age
 Route::get('/compras', [ViewsController::class, 'compras'])->name('compras');
 Route::get('/acercainfo', [ViewsController::class, 'acercainfo'])->name('acercainfo');
 Route::get('/citas', [ViewsController::class, 'citas'])->name('citas');
-Route::post('/citas', [ViewsController::class, 'citas'])->name('citas');
+Route::post('/citas/agendar', [AgendamientoController::class, 'agendarCita'])->name('citas.agendar');
 Route::patch('/citas/gestionar/{cita}', [AgendamientoController::class, 'gestionarCita'])->name('cita.gestionarCita');
 Route::get('/citasT', [ViewsController::class, 'citasT'])->name('citasT');
 Route::post('/citasT', [ViewsController::class, 'citasT'])->name('citasT');
@@ -55,7 +55,6 @@ Route::patch("/recuperarContrasenia/", [UsuarioController::class, 'actualizarPas
 Route::get('/mostrar-modal', [ViewsController::class, 'mostrarModal'])->name('modal');
 
 Route::post('/provedores', [ProveedorController::class, 'store'])->name('proveedor.store');
-Route::post('/agendamiento', [AgendamientoController::class, 'storeagendamiento'])->name('agendamiento.storeagendamiento');
 Route::get('/provedores/{proveedor}/edit', [ProveedorController::class, 'edit'])->name('proveedor.edit');
 Route::patch('/proveedores/{proveedor}', [ProveedorController::class, 'update'])->name('proveedor.update');
 Route::delete('/proveedores/eliminar/{proveedor}', [ProveedorController::class, 'eliminar'])->name('proveedor.eliminar');

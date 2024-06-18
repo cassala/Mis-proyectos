@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Cita extends Model
 {
-	protected $table = 'citast';
+	protected $table = 'citas';
 	public $timestamps = false;
 
 	protected $casts = [
