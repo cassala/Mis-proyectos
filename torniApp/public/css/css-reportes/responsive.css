@@ -1,0 +1,482 @@
+input{
+    background-color: #E7E0DF;
+    border-color: black;
+}
+
+h3 {
+    color: #000;
+    font-weight: bolder;
+}
+
+
+.LabelPrimerColumna{
+    margin-left: 1em;
+    color:black;    
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+            .label-container {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-left: 1em;
+                color: black;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+        
+            .random-data {
+                margin-left: 5px;
+            }
+        
+            label {
+                margin-right: 5px;
+            }
+    
+#BtnAceptar {
+        background-color: white;
+        color: red;
+        border: 2px solid red;
+        border-radius: 15px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 5px 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        margin-bottom: 1em;
+    }
+
+    #BtnAceptar:hover {
+        opacity: 0.8;
+    }
+
+    #BtnRechazar {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 5px 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        margin-bottom: 1em;
+    }
+
+    #BtnRechazar:hover {
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px){
+            #openbtn{
+                display: none;
+            }
+        }
+
+
+    .titulosPrimerColumna{
+        text-align: center;
+        font-weight: bold;
+        color:gray;
+    }
+table tr td{
+    color: black;
+}
+
+
+
+
+
+
+
+
+.table-responsive .dataTables_wrapper .row .dataTables_info {
+    padding-left: 1.5rem;
+    padding-top: unset;
+    visibility: hidden;
+}
+
+.tabla label{
+    visibility: hidden;
+    color: white;
+}
+
+.content-inner {
+    padding: calc(var(--bs-gutter-x, 1rem)* 2);
+    margin-left: 1em;
+    margin-right: 2em;
+}
+    #tarjetaComprasyVentasrealizadas{
+        padding-bottom: 6.5em;
+        
+    }
+#TarjetaProductosMasvendidos{
+    padding: 1em;
+}
+.form-select{
+    background-color: #E7E0DF;
+    border-width:0.1em;
+    border-color:#E7E0DF;
+    color:black;
+    width:60.4%;
+    margin-top:0.3em;
+}
+
+#modaldiv{
+    border-radius: 15px;
+}
+
+#btncerrar{
+    margin-right: 5%;
+}
+
+#RegistrarCliente{
+    margin: 5%;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+    padding: 1px;
+    
+}     
+
+.g-3, .gy-3 {
+    --bs-gutter-y: 0.rem;
+    margin-bottom: -0.5em;
+}
+
+#tablaDedatos{
+    margin-top:-1.7em;
+}
+#validationCustom01{
+    width:100%;
+    margin-right: 0.4em;
+    text-align: right;
+}
+
+#inputcliente,
+#inputproducto,
+#comboboxservicio,
+#inputcantidad,
+#inputprecio,
+#inputefectivo,
+#inputcambio,
+#inputtotalapagar{
+    border-radius: 8px;
+    border-color: #000;
+}
+
+#comboboxservicio{
+    width: 20%;
+    display: flex;
+    margin-top: -0.2%;
+    height: 37px;
+    margin-right: 1.5%;
+}
+
+#inputcliente:focus{
+    border-color: #000;
+}
+
+#sell-card{
+      
+     color: #fff; 
+     padding-top: 0%; 
+     font-size: 1.3em;     
+}
+
+#inputcantidad{
+    width: 20%;
+}
+
+#inputprecio{
+    width: 20%;
+}
+
+.iq-banner:not(.hide)+.content-inner {
+    margin-top: 0.5rem !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+        
+.card{
+    border-color:grey;
+    border-width: 0.2em;
+    border-radius: 1.3em;
+    padding: 1em;
+}
+
+#tarjetaFormularioTotales{
+   margin-top: -7em;
+    padding:2%;
+    margin-left: 43%;
+    width:60%;
+    border-radius: 15px;
+}
+
+#general{
+    border-radius: 15px;
+}
+
+#mela{
+    border-radius: 15px;
+    margin-top: 2%;
+}
+
+#pwdefectivo {
+    font-weight: bold;
+    color: green;
+    border: 1px solid green; /* Opcional: para resaltar el borde en verde */        
+}
+    
+#openModalBtn,
+#btnañadir,
+#btnguardar{
+    width: 20%;
+    display: flex;
+    height: 35px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    background-color: #F63A3D; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde del botón si es necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#openModalBtn:active {
+    background-color: initial;
+    color: initial;
+    border: none;
+}
+
+#openModalBtn:focus,
+#btnañadir,
+#btnfacturar,
+#btnguardar {
+            /*box-shadow: 0 0.5em 0.5em -0.1em var(--hover);
+            -webkit-transform: translateY(-0.25em);
+                    transform: translateY(-0.25em);*/
+    outline: none;
+    border: none;
+}
+
+.botonagregar{
+    margin-top: 1%;
+}
+    
+.subes{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.3em;   
+}
+    
+#EncabezadosTablaFac1{
+    border-color: black;
+    color:black;
+    font-weight: bolder;
+    font-size:1.2em;
+    padding:2px;
+}
+       
+#EncabezadosTablaFac2{
+    border-color: black;
+    color:black;
+    font-weight: bolder;
+    font-size:1.2em;
+    padding:2px;
+}
+       
+#EncabezadosTablaFac3{
+        
+    border-color: black;
+    color:black;    
+    font-weight: bolder;
+    font-size:1.2em;
+    padding:2px;       
+}
+       
+#EncabezadosTablaFac4{
+        
+    border-color: black;
+    color:black;
+    font-weight: bolder;
+    font-size:1.2em;
+    padding:2px;
+}
+       
+.form-label{
+    color:black;
+    font-size: 1.3em;
+    font-weight: bold;        
+}
+
+.btn-primary{
+    background-color: #F63A3D;
+    color:white;
+    border-color: #F63A3D;
+    justify-items: left;
+}
+#facturacion{
+    margin-left: 240%;
+    font-weight: bolder;
+}
+#tituloFactura{
+    text-align: center;
+}
+#registrarCliente{
+    margin-top: 6.2%;
+}
+.form-control {
+    width: 60%;
+    padding:2px;
+    background-color: #E7E0DF;
+    border-width:0.1em;
+    border-color:#E7E0DF;
+    margin:0.1em;
+}
+.form-control2{
+
+    width: 100%;
+    background-color: #E7E0DF;
+    border-width:0.0em;
+    border-color:#E7E0DF;
+    border-radius: 0.2em;
+}
+
+.topnav {
+	overflow: hidden;
+	background: linear-gradient(to right, #F63A3D 45%, #000);
+	font-family: Comic Sans MS/*Viner Hand ITC*/;
+	border-radius:0px;
+	height: 70px;
+	display: block;
+	text-align: center;
+	justify-items: center;
+}
+
+
+#openbtn{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            width: 47px;
+            height: 47px;
+            padding: 0;
+            margin-left: -5%;
+            top: 0;
+            margin-top: 0.8%;
+            background-position-y: top;
+            /*background-image: url('data:image/svg+xml;uft8, <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="rgb(246, 58, 61)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16.475 5.408l2.117 2.117m-.756-3.982L12.109 9.27a2.118 2.118 0 0 0-.58 1.082L11 13l2.648-.53c.41-.082.786-.283 1.082-.579l5.727-5.727a1.853 1.853 0 1 0-2.621-2.621"/><path d="M19 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/></g></svg>');*/
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-image: url('data:image/svg+xml;uft8, <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><path fill="white" d="M3 21V3h9v2H5v14h7v2zm13-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/></svg>');
+
+        }
+
+
+.tlogo{
+	float: left;
+	margin-right: 210px;
+	/*display: inline-block;*/
+	
+}
+.tlogo img{
+	padding-top: -40x;
+	width: 200px;
+	display: inline-block;
+	margin-top: -20px;
+	height: 120px;
+	padding-bottom: 0px;
+}
+
+/*.topnav a {
+	float: right;
+	display: block;
+	color: #f2f2f2; /*color letra
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}*/
+
+.topnav h1{
+	padding: 0px;
+	margin-left: -340px;
+	margin-top: 15px;
+	color: #fff;
+	text-align: center;
+	display: inline-flex;
+}
+
+.topnav button{
+	float: right;
+	display: flex;
+	margin-top: 18px;
+	padding-right: 10px;
+
+}
+/*
+a{
+	text-shadow: 0px 4px 4px rgba(255, 0, 0, 0.5);
+}
+
+.topnav a:hover {
+	background-color: #000000/*#ddd;
+	color: white;
+}
+
+.topnav a.active {
+	background-color: #3FCBEB;
+	color: white;
+}*/
+
+.topnav .icon {
+	display: none;
+}
+
+
+@media screen and (max-width: 750px){
+	.topnav a:not(:first-child) {display: none;}
+	.tlogo img{
+		padding-top: 20px;
+		margin-right: 20px;
+		width: 150px;
+		height: 100px;
+	}
+
+	.topnav h1{
+		font-size: 34px;
+		padding-left: 10%;
+	}
+
+    #openbtn{
+        display: none;
+    }
+
+	.topnav a.icon{
+		float: right;
+		display:block;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.topnav.responsive {position: relative;}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.topnav h1{
+		font-size: 34px;
+		padding-left: 10%;
+	}
+
+	.topnav.responsive a{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}

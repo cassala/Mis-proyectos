@@ -1,0 +1,649 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,800i&display=swap');
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(css/animate.min.css);
+@import url(css/normalize.css);
+@import url(css/icomoon.css);
+@import url(css/font-awesome.min.css);
+@import url(css/meanmenu.css);
+@import url(css/owl.carousel.min.css);
+@import url(css/swiper.min.css);
+@import url(css/slick.css);
+@import url(css/jquery.fancybox.min.css);
+@import url(css/jquery-ui.css);
+@import url(css/nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+}
+
+#nombre:-webkit-autofill,
+#telefono:-webkit-autofill {
+     -webkit-box-shadow: 0 0 0 1000px #fff inset;
+     /* Establecer un fondo blanco para evitar cambios de color */
+     -webkit-text-fill-color: #333;
+     /* Color del texto */
+     -webkit-background-clip: text;
+     /* Cortar el fondo para mostrar el background image */
+     background-repeat: no-repeat;
+     background-position: 8px center;
+     background-image: url('../../public/css/css-login/imagenes-login/contraseña.png');
+     background-size: 20px;
+     display: inline;
+     background-image: url('../../public/css/css-login/imagenes-login/contraseña.png');
+     /* Ruta al archivo de background image */
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+.main-layout {
+     overflow-y: hidden;
+     max-height: 90%;
+     /*color: #ff0000;
+     font-size: 14px;
+     font-family: 'Poppins', sans-serif;
+     line-height: 1.80857;
+     font-weight: normal;
+     background: url(../imagenes-login/fondo-recu.png);
+     padding: 0px;
+     background-size: 90%, 100%;
+     background-position: left top;
+     background-repeat: no-repeat;*/
+}
+
+/*nuevo formulario*/
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.ulpgcds-form__item input[type="date"]{
+     font-family: "Open Sans", sans-serif;
+     font-weight: 400;
+     font-size: 0.875rem;
+     color: #565a5c;
+     height: 40px;
+     /*min-width: 280px;*/
+     outline: none;
+     background: #f6f7f7;
+     border: none;
+     border-bottom: solid #0066a1 2px;
+     padding: 4px 12px;
+     box-sizing: border-box;
+}
+
+.ulpgcds-link {
+     font-weight: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+     filter: invert(20%) sepia(100%) saturate(800%) hue-rotate(10deg) brightness(100%) contrast(100%);
+}
+
+
+input[type=text], 
+input[type=tel],
+input[type=date],
+#comboboxservicio {
+  width: 100%;
+  padding: 8px 8px;
+  padding-right: -25%;
+  margin: 0px 0;
+  display: block;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2%;
+}
+
+#comboboxservicio{
+     margin-top: 0;
+}
+
+input#fecha-datepicker-2 {
+     border-bottom: solid #F63A3D 2px;
+     /*font-family: "Open Sans", sans-serif;
+     font-weight: 400;
+     font-size: 0.875rem;
+     color: #565a5c;
+     height: 40px;
+     min-width: 280px;
+     outline: none;
+     background: #f6f7f7;
+     border: none;
+     padding: 4px 12px;
+     transition: border 0.2s ease-in-out;*/
+}
+
+input[type=checkbox]{
+     margin-top: 10px;
+}
+
+input[type=checkbox]:checked{
+     accent-color: #F63A3D;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.ingresar {
+	background-color: #ffffff;
+	color: #F63A3D;
+	padding: 10px 20px;
+	margin: 8px 0;
+	border: 2px solid #F63A3D;
+	border-radius: 8px;
+	cursor: pointer;
+	/*width: 29%;
+	height: 10%;*/
+	margin-left: 32%;
+     width: 36%;
+}
+
+
+
+
+.container {
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+}
+
+form {
+     margin-top: 0%;
+     top: 0;
+     width: 80%;
+     float: left;
+}
+
+@media screen and (max-width: 1200px) {
+
+     /*.form{
+          width: 100%;
+     }*/
+
+     form {
+          margin-top: 1%;
+          top: 10%;
+          width: 80%;
+          float: left;
+     }
+
+     .formulario{
+          margin-top: -5%;
+     }
+
+     label{
+          padding-top: 10px;
+     }
+
+     input[type=text], 
+     input[type=tel],
+     input[type=date] {
+          width: 100%;
+     }
+
+     .ingresar {
+          background-color: #ffffff;
+	     color: #F63A3D;
+          padding: 10px 20px;
+	     width: 36%;
+	     margin-left: 32%;
+
+          
+          /*margin-left: -25%;
+          width: 35%;*/
+     }
+}
+
+@media screen and (max-width: 750px) {
+
+     form {
+          margin-top: 15%;
+          top: 10%;
+          width: 95%;
+          float: left;
+     }
+
+     label{
+          padding-top: 10px;
+     }
+
+     input[type=text], 
+     input[type=tel],
+     input[type=date] {
+          width: 100%;
+          font-size: smaller;
+     }
+
+     .ingresar {
+          width: 40%;
+          margin-left: 30%;
+          font-size: 12px;
+          padding-left: 8px;
+          padding-right: 8px;
+          
+     }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+     
+     form {
+          margin-top: 15%;
+          top: 10%;
+          width: 110%;
+          float: left;
+     }
+
+     label{
+          padding-top: 10px;
+     }
+
+     .container{
+          width: 150%;
+     }
+
+     input[type=text], 
+     input[type=tel],
+     input[type=date] {
+          width: 100%;
+          font-size: smaller;
+     }
+
+     .ingresar {
+          width: 40%;
+          margin-left: 30%;
+          font-size: 11px;
+          padding-left: 3px;
+          padding-right: 3px;
+     }
+}
+
+/*@media screen and (min-width: 900px) {
+
+     /*.form{
+          width: 100%;
+     }
+
+     input[type=text]{
+          width: 100%;
+     }
+
+     .boton-recuperar {
+          width: 50%;
+          margin-left: 15%;
+          font-size: small;
+     }
+}*/
+
+.slidemenutorni a{
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+     font-weight: 0;
+}
+
+/*Fin nuevo formulario*/
+.bg-image {
+     background-image: url(../css-agendamiento/imagenes/fondo-recu2.png);
+     background-size: cover;
+     position: relative;
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 100vh;
+     max-height: 100vh;
+     align-items: center;
+     justify-items: center;
+ }
+
+
+ .logo-dentro-centrado{
+     height: 60%;
+     width: 45%;
+     margin-top: 6.5%;
+     margin-bottom: 3.5%;
+     display: block;
+     float: right;
+     
+
+ }
+
+.tmdentro{
+     max-width: 100%;
+     width: 100%;
+     max-height: 100%;
+     height: auto;
+     float: right;
+     display: block;
+     margin-top: 0.5%;
+}
+
+.icon-text {
+     display: inline-block;
+     color: #F63A3D;
+     font-size: larger;
+     margin-left: 5%;
+     
+}
+
+.icon-text-redes {
+     display: inline-block;
+     color: #F63A3D;
+     font-size: xx-large;
+     margin-top: 5%;
+     margin-right: 0;
+}
+
+.icon-text-phone{
+     display: inline-block;
+     color: #F63A3D;
+     font-size: larger;
+     margin-left: 5%;
+     margin-right: 15px;
+     
+}
+
+.icon {
+     margin-right: 15px; /* Espacio entre el icono y el texto */
+}
+
+.recuperar .centrado{
+     border: 1px solid #000;
+     position: fixed;
+     top: 40%;
+     left: 10%;
+     border-radius: 15px;
+     width: 80%;
+     height: 40%;
+     display: flex;
+
+     /*position: absolute;
+     top: 10%;
+     left: 20%;
+     width: 80%;
+     height: 70%;
+     max-width: 130vh;
+     border: 1px solid #000 ;
+     background-color: #fff;
+     border-radius: 15px;*/
+ }
+
+.recuperar h1{
+     display: inline;
+     color: #F63A3D;
+     margin-bottom: 100px;
+}
+
+.recuperar p{
+     margin-top: 1.5%;
+}
+
+/*.recuperar center{
+     display: inline-block;
+}*/
+
+.recuperar .formulario{
+     margin-top: 5%;
+     width: 44%;
+     margin-left: 4%;
+}
+
+.recuperar{
+     position: fixed;
+     top: 20%;
+     left: 5%;
+     width: 90%;
+     height: 70%;
+     max-width: 90%;
+     border: 1px solid #000 ;
+     background-color: #fff;
+     border-radius: 15px;
+     /*border-color: 3px solid #000;
+     position: absolute;
+     top: 10%;
+     left: 20%;
+     width: 50px;
+     height: 50px;*/
+ }
+
+
+a {
+     color: #1f1f1f;
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+     font-weight: 0;
+}
+
+h1{
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #111111;
+     margin: 0
+}
+
+h1 {
+     font-size: 24px;
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a {
+     color: #212121;
+     text-decoration: none!important;
+     opacity: 1;
+     font-weight: 0;
+}
+
+button:focus {
+     outline: none;
+}
+
+ul,li,ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+p {
+     margin: 0px;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 24px;
+}
+
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+     font-weight: 0;
+}
+
+a,
+.btn {
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+     font-weight: 0;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+     float: right;
+}
+
+ :focus {
+     outline: 0;
+}
+
+.btn-custom {
+     margin-top: 20px;
+     background-color: transparent !important;
+     border: 2px solid #ddd;
+     padding: 12px 40px;
+     font-size: 16px;
+}
+
+.lead {
+     font-size: 18px;
+     line-height: 30px;
+     color: #767676;
+     margin: 0;
+     padding: 0;
+}
+
+/*.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+     border: none !important;
+}*/
+
+button {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     cursor: pointer;
+}
+
+.sidepanel {
+     width: 0;
+     position: fixed;
+     z-index: 9999;
+     height: 100%;
+     top: 0;
+     right: 0;
+     background-image: url(../css-agendamiento/imagenes/blurr.png);
+     background-size: cover;
+     background-position-x: center;
+     background-position-y: center;
+     background-repeat: no-repeat;
+     background-color: #717171;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+     float:right;
+}
+
+.sidepanel a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 18px;
+     color: #fff;
+     display: block;
+     transition: 0.3s;
+     font-weight: 700;
+     text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.795);
+}
+
+.sidepanel a:hover {
+     color: #F63A3D;
+}
+
+
+
+.sidepanel .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+}
+
+.openbtn {
+     font-size: 20px;
+     cursor: pointer;
+     background-color: transparent;
+     padding: 0;
+     border: none;
+     margin-left: 16px;
+}
+
+.logo {
+     margin-top: 50%;
+     margin-left: 20px;
+     width: 100%;
+     max-width: 500px;
+}
+
+ul.conat_info li {
+     display: inline-block;
+     padding: 0 26px;
+}
+
+ul.conat_info li a {
+     color: #fff;
+     display: inline-block;
+     font-size: 30px;
+}
+
+ul.conat_info li a:hover {
+     color: #fff;
+}
+
+.right_bottun {
+     float: right;
+     display: flex;
+     flex-wrap: wrap;
+     
+}
+
+.header {
+     width: 100%;
+     padding: 30px 30px;
+     background: transparent;
+     position: absolute;
+     z-index: 999;
+}
+
+.banner_main {
+     background: url(../css-agendamiento/imagenes/fondo-recu2.png);
+     padding: -800px 0px 0px 0px;
+     background-size: 70% 50%;
+     margin-bottom: -200px;
+     background-position: left;
+     background-repeat: no-repeat;
+     min-height: 1150px;
+     background-position: left top;
+}
+
+.banner_slide {
+     padding: 0 80px;
+}

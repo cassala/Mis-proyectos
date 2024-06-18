@@ -1,0 +1,97 @@
+
+.topnav {
+	overflow: hidden;
+	background-color: transparent;
+	font-family: Comic Sans MS/*Viner Hand ITC*/;
+	border-radius:0px;
+	height: 70px;
+	display: block;
+	text-align: center;
+	justify-items: center;
+}
+
+
+.tlogo{
+	float: left;
+	margin-right: 210px;
+	/*display: inline-block;*/
+	
+}
+.tlogo img{
+	padding-top: -40x;
+	width: 200px;
+	display: inline-block;
+	margin-top: -20px;
+	height: 120px;
+	padding-bottom: 0px;
+}
+
+/*.topnav a {
+	float: right;
+	display: block;
+	color: #f2f2f2; /*color letra
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}*/
+
+.topnav h1{
+	padding: 0px;
+	margin-left: -340px;
+	margin-top: 15px;
+	color: #fff;
+	text-align: center;
+	display: inline-flex;
+}
+
+.topnav button{
+	float: right;
+	display: flex;
+	margin-top: 18px;
+	padding-right: 10px;
+
+}
+
+.topnav a:hover {
+	background-color: #F63A3D/*#ddd*/;
+	color: white;
+}
+
+.topnav a.active {
+	background-color: #3FCBEB;
+	color: white;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+
+@media screen and (max-width: 600px){
+	.topnav a:not(:first-child) {display: none;}
+	.tlogo img{
+		padding-top: 20px;
+		margin-right: 20px;
+		width: 150px;
+		height: 100px;
+	}
+	.topnav a.icon{
+		float: right;
+		display:block;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.topnav.responsive {position: relative;}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
